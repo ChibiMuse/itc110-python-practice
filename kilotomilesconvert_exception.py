@@ -3,19 +3,22 @@
 # by: Megan Smith
 
 #The conversation formula for kilometers to miles 1 kilometer = .621371 miles
+
 def main():
-    print("The distance is " + str(float(kiloVar)*.621371) + " miles.")
+    km_miles()
 
-print("This program converts kilometers to miles.")
-
-#Request for user kilometer input
-#Throws up an error message if they enter anything that isn't a number.
-while True:
+def km_miles():
+    #input
+    print("This program converts kilometers to miles")
     try:
-        kiloVar = float(input("Please enter distance in kilometers:"))
-        break
-    except ValueError:
-        print("Distances can only be in numbers. Please try again!")
+        kiloVar = eval(input("Please enter distance in kilometers:"))
+        #processing
+        miles = kiloVar * .621371
+        #output
+        print("The distance is", miles, "miles.")
+    except:
+        print("Distances can only be in numbers. Please try again.")
+        km_miles()
 
 main()
 
