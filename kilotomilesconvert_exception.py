@@ -5,11 +5,11 @@
 #The conversation formula for kilometers to miles 1 kilometer = .621371 miles
 
 def main():
+    print("This program converts kilometers to miles")
     km_miles()
 
 def km_miles():
     #input
-    print("This program converts kilometers to miles")
     try:
         kiloVar = eval(input("Please enter distance in kilometers:"))
         #processing
