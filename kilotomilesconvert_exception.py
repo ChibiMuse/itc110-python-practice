@@ -7,6 +7,7 @@
 def main():
     print("This program converts kilometers to miles")
     km_miles()
+    input("Press the <Enter> key to quit")
 
 def km_miles():
     #input
