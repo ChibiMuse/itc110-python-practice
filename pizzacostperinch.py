@@ -9,15 +9,25 @@ def main():
     print("This program calculates the cost per square inch of pizza!")
     pizza_cost()
 
+def areaFunc(radius):
+	area = pi * radius**2
+	return area
+	
+def radiusFunc(diameter):
+	radius = diameter/2
+
+
 def pizza_cost():
     try:
         #input
         pizzaSize = int(input("Enter the diameter of the pizza (in inches):"))
         pizzaCost = float(input("Enter the cost of the pizza (in dollars):"))
         #process the radius
-        radius = pizzaSize/2
+        radius = radiusFunc(pizzaSize)
+		area = areaFunc(radius)
+		
         #process the area
-        area = pi * (radius*radius)
+       # area = pi * (radius*radius)
         #process the cast per sq inch
         costPer = round(pizzaCost/area, 2)
         #output
@@ -28,8 +38,4 @@ def pizza_cost():
     except:
         print("Please enter a whole number without other characters.")
         pizza_cost()
-
-
-main()
-        
         
