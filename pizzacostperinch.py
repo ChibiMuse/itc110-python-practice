@@ -38,4 +38,6 @@ def pizza_cost():
     except:
         print("Please enter a whole number without other characters.")
         pizza_cost()
+	
+main()
         
