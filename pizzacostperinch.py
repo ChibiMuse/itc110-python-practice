@@ -8,7 +8,7 @@ from math import pi
 def main():
     print("This program calculates the cost per square inch of pizza!")
     pizza_cost()
-
+    
 #a function to return the area of a circle when given the radius
 def areaFunc(radius):
 	area = pi * radius**2
@@ -26,9 +26,11 @@ def pizza_cost():
         pizzaCost = float(input("Enter the cost of the pizza (in dollars):"))
         #process the radius
         radius = radiusFunc(pizzaSize)
+
         #process the area
         area = areaFunc(radius)
         #process the cost per sq inch
+
         costPer = round(pizzaCost/area, 2)
         #output
         print("The", str(pizzaSize),"inch pizza cost ${:.2f}".format(round(pizzaCost,2))+".")
@@ -38,8 +40,6 @@ def pizza_cost():
     except:
         print("Please enter a whole number without other characters.")
         pizza_cost()
-
-
+	
 main()
-        
         
