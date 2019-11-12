@@ -2,7 +2,7 @@
 # A program to calculate your weekly pay based on hourly pay rate.
 # by Megan Smith
 
-#calls getPay() and getHours() and passes those variables to calculatePay(pay, hours)
+#calls getPay() and getHours() and passes those variables to calculatePay(pay, regular hours, overtime hours)
 def main():
     print("This program calculates your weekly pay.\n")
     x = getPay()
@@ -33,7 +33,7 @@ def getHours():
         y = getHours()
         return y
 
-#function that takes two parameters (pay and hours) and returns the hourly pay.
+#function that takes three parameters (pay, reg hours, and overtime hours) and returns the hourly pay.
 def calculatePay(pay, regHours, overtime):
     regPay = pay * regHours
     overtimePay = pay * (overtime * 1.5)
