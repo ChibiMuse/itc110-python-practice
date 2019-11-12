@@ -6,7 +6,10 @@
 def main():
     print("This program calculates your weekly pay.\n")
     x = getPay()
+    print("Please enter your regular hours:", end = " ")
     y = getHours()
+    print("Please enter your overtime hours:", end = " ")
+    z = getHours()
     total = calculatePay(x, y, z)
     print("Your weekly pay is: ${0:.2f}".format(total))
 
@@ -23,7 +26,7 @@ def getPay():
 #function to get hours from user
 def getHours():
     try:
-        hours = float(input("Enter hours worked: "))
+        hours = float(input())
         return hours
     except:
         print("Please try again.")
@@ -31,8 +34,10 @@ def getHours():
         return y
 
 #function that takes two parameters (pay and hours) and returns the hourly pay.
-def calculatePay(pay, hours):
-    total = pay * hours
+def calculatePay(pay, regHours, overtime):
+    regPay = pay * regHours
+    overtimePay = pay * (overtime * 1.5)
+    total = regPay + overtimePay
     return total
 
 main()
